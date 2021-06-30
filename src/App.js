@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import "./App.css"
+import Movie from './Movie'
+
 
 const App = () => {
   
@@ -23,22 +25,7 @@ const App = () => {
   return (
     <div className={"App"}>
       {movie.map(item => (
-       <div className={"Movie"}>
-         <div className={"Movie_Column"}>
-          <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title} className={"Movie_Poster"} />
-         </div>
-         <div className={"Movie_Column"}>
-           <h1>{item.title}</h1>
-           <div className={"Movie_Genres"}>
-             {item.genre_ids.map(genre => (
-               <span className={"Movie_Genre"}>{genre}</span>
-              ))}
-           </div>
-           <div className={"Movie_Overview"}>
-             <span>{item.overview.slice(0, 200)} ...</span>
-           </div>
-         </div>
-       </div> 
+        <Movie item={item} />
       ))}
     </div>
   );
