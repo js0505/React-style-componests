@@ -1,38 +1,53 @@
 .App {
-  text-align: center;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Movie {
+    background-color: white;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    text-overflow: ellipsis;
+    padding: 0 20px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Movie h1 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Movie_Column {
+    width: 30%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
 }
 
-.App-link {
-  color: #61dafb;
+.Movie_Column:last-child {
+    padding: 20px 0;
+    width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Movie .Movie_Genres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.Movie_Genres .Movie_Genre {
+    margin-right: 10px;
+    color: #B4B5BD;
+}
+
+.Movie .Movie_Overview {
+    text-overflow: ellipsis;
+    color: #B4B5BD;
+    overflow: hidden;
 }
