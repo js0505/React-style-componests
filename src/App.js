@@ -25,13 +25,13 @@ const App = () => {
       {movie.map(item => (
        <div className={"Movie"}>
          <div className={"Movie_Column"}>
-
+          <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt={item.title} className={"Movie_Poster"} />
          </div>
          <div className={"Movie_Column"}>
            <h1>{item.title}</h1>
            <div className={"Movie_Genres"}>
              {item.genre_ids.map(genre => (
-               <h5 className={"Movie_Genre"}>{genre}</h5>
+               <span className={"Movie_Genre"}>{genre}</span>
               ))}
            </div>
            <div className={"Movie_Overview"}>
