@@ -5,7 +5,7 @@ https://api.themoviedb.org/3/movie/now_playing?api_key=8597e491ed6e80f0de12e349e
 - Poster url
 https://image.tmdb.org/t/p/w500
 
-- 실습 목표
+
 
 영화 데이터를 받아와서
 Poster, Title, Genre, Overview 데이터를 받아와서
